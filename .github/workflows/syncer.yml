@@ -37,4 +37,5 @@ jobs:
 
     - name: Sync
       run: |
-        image-syncer crossplane/crossplane ghcr.io/appscode-images/crossplane
+        image-syncer crossplane/crossplane ghcr.io/appscode-images/crossplane || true
+        image-syncer xpkg.upbound.io/crossplane/crossplane ghcr.io/appscode-images/crossplane || true
