@@ -4,13 +4,18 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/Masterminds/semver/v3"
 	"github.com/google/go-containerregistry/pkg/authn"
 	"github.com/google/go-containerregistry/pkg/crane"
+	flag "github.com/spf13/pflag"
 	"k8s.io/klog/v2"
 )
 
 func main() {
-	args := os.Args[1:]
+	all := flag.Bool("all", false, "If false, only syncs released versions")
+	flag.Parse()
+
+	args := flag.CommandLine.Args()
 	if len(args) != 2 {
 		fmt.Println("Invalid args. Use image-syncer <src> <dst>")
 		os.Exit(1)
@@ -24,6 +29,15 @@ func main() {
 		panic(err)
 	}
 	for _, tag := range tags {
+		if !*all {
+			v, err := semver.NewVersion(tag)
+			if err != nil {
+				continue
+			} else if v.Prerelease() != "" {
+				continue
+			}
+		}
+
 		_, found := ImageDigest(dst, tag)
 		if found {
 			klog.Infof("found %s:%s, skipping ...", dst, tag)

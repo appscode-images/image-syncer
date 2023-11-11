@@ -3,7 +3,9 @@ module github.com/appscode-images/image-syncer
 go 1.21.3
 
 require (
+	github.com/Masterminds/semver/v3 v3.2.1
 	github.com/google/go-containerregistry v0.16.1
+	github.com/spf13/pflag v1.0.5
 	k8s.io/klog/v2 v2.100.1
 )
 
