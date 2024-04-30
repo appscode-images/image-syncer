@@ -42,3 +42,4 @@ jobs:
         image-syncer ghcr.io/stakater/reloader ghcr.io/appscode/reloader || true
         image-syncer crossplane/crossplane ghcr.io/kubedb/crossplane || true
         image-syncer xpkg.upbound.io/crossplane/crossplane ghcr.io/kubedb/crossplane || true
+        image-syncer registry.scality.com/cloudserver/cloudserver ghcr.io/appscode/cloudserver || true
