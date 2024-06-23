@@ -43,4 +43,5 @@ jobs:
         image-syncer groundnuty/k8s-wait-for ghcr.io/appscode/k8s-wait-for || true
         image-syncer openfga/openfga ghcr.io/appscode/openfga || true
         image-syncer registry.scality.com/cloudserver/cloudserver ghcr.io/appscode/cloudserver || true
+        image-syncer rpardini/docker-registry-proxy ghcr.io/appscode/docker-registry-proxy || true
         image-syncer xpkg.upbound.io/crossplane/crossplane ghcr.io/kubedb/crossplane || true
