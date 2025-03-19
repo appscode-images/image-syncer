@@ -37,13 +37,13 @@ jobs:
 
     - name: Sync
       run: |
+        image-syncer --all ghcr.io/ferretdb/postgres-documentdb ghcr.io/appscode-images/postgres-documentdb || true
         image-syncer andrewgaul/s3proxy ghcr.io/appscode/s3proxy || true
         image-syncer crossplane/crossplane ghcr.io/kubedb/crossplane || true
-        image-syncer ghcr.io/ferretdb/postgres-documentdb ghcr.io/appscode-images/postgres-documentdb || true
+        image-syncer ghcr.io/scality/cloudserver ghcr.io/appscode/cloudserver || true
         image-syncer ghcr.io/stakater/reloader ghcr.io/appscode/reloader || true
         image-syncer groundnuty/k8s-wait-for ghcr.io/appscode/k8s-wait-for || true
         image-syncer openfga/openfga ghcr.io/appscode/openfga || true
         image-syncer registry.k8s.io/ingress-nginx/controller ghcr.io/appscode-images/ingress-nginx-controller
-        image-syncer ghcr.io/scality/cloudserver ghcr.io/appscode/cloudserver || true
         image-syncer rpardini/docker-registry-proxy ghcr.io/appscode/docker-registry-proxy || true
         image-syncer xpkg.upbound.io/crossplane/crossplane ghcr.io/kubedb/crossplane || true
