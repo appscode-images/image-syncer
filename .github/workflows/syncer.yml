@@ -42,6 +42,7 @@ jobs:
         image-syncer crossplane/crossplane ghcr.io/kubedb/crossplane || true
         image-syncer ghcr.io/scality/cloudserver ghcr.io/appscode/cloudserver || true
         image-syncer ghcr.io/stakater/reloader ghcr.io/appscode/reloader || true
+        image-syncer gotenberg/gotenberg ghcr.io/appscode/gotenberg || true
         image-syncer groundnuty/k8s-wait-for ghcr.io/appscode/k8s-wait-for || true
         image-syncer openfga/openfga ghcr.io/appscode/openfga || true
         image-syncer registry.k8s.io/ingress-nginx/controller ghcr.io/appscode-images/ingress-nginx-controller
