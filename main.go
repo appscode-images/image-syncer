@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"os"
+	"strings"
 
 	"github.com/Masterminds/semver/v3"
 	"github.com/google/go-containerregistry/pkg/authn"
@@ -30,7 +31,7 @@ func main() {
 	}
 	for _, tag := range tags {
 		if !*all {
-			v, err := semver.NewVersion(tag)
+			v, err := semver.StrictNewVersion(strings.TrimPrefix(tag, "v"))
 			if err != nil {
 				continue
 			} else if v.Prerelease() != "" {
