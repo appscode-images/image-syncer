@@ -45,6 +45,10 @@ jobs:
         image-syncer gotenberg/gotenberg ghcr.io/appscode/gotenberg || true
         image-syncer groundnuty/k8s-wait-for ghcr.io/appscode/k8s-wait-for || true
         image-syncer openfga/openfga ghcr.io/appscode/openfga || true
+        image-syncer quay.io/jetstack/cert-manager-acmesolver ghcr.io/appscode-images/cert-manager-acmesolver || true
+        image-syncer quay.io/jetstack/cert-manager-cainjector ghcr.io/appscode-images/cert-manager-cainjector || true
+        image-syncer quay.io/jetstack/cert-manager-controller ghcr.io/appscode-images/cert-manager-controller || true
+        image-syncer quay.io/jetstack/cert-manager-webhook ghcr.io/appscode-images/cert-manager-webhook || true
         image-syncer registry.k8s.io/ingress-nginx/controller ghcr.io/appscode-images/ingress-nginx-controller
         image-syncer rpardini/docker-registry-proxy ghcr.io/appscode/docker-registry-proxy || true
         image-syncer xpkg.upbound.io/crossplane/crossplane ghcr.io/kubedb/crossplane || true
