@@ -46,7 +46,8 @@ func main() {
 		}
 		err = crane.Copy(src+":"+tag, dst+":"+tag, crane.WithAuthFromKeychain(authn.DefaultKeychain))
 		if err != nil {
-			panic(err)
+			klog.Infof("failed to copy %s:%s, err: %v", dst, tag, err)
+			continue
 		}
 	}
 }
