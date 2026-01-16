@@ -40,6 +40,13 @@ jobs:
         image-syncer --all ghcr.io/ferretdb/postgres-documentdb ghcr.io/appscode-images/postgres-documentdb || true
         image-syncer andrewgaul/s3proxy ghcr.io/appscode/s3proxy || true
         image-syncer crossplane/crossplane ghcr.io/kubedb/crossplane || true
+        image-syncer ghcr.io/fluxcd/flux-cli ghcr.io/appscode-images/fluxcd-cli || true
+        image-syncer ghcr.io/fluxcd/helm-controller ghcr.io/appscode-images/fluxcd-helm-controller || true
+        image-syncer ghcr.io/fluxcd/image-automation-controller ghcr.io/appscode-images/fluxcd-image-automation-controller || true
+        image-syncer ghcr.io/fluxcd/image-reflector-controller ghcr.io/appscode-images/fluxcd-image-reflector-controller || true
+        image-syncer ghcr.io/fluxcd/kustomize-controller ghcr.io/appscode-images/fluxcd-kustomize-controller || true
+        image-syncer ghcr.io/fluxcd/notification-controller ghcr.io/appscode-images/fluxcd-notification-controller || true
+        image-syncer ghcr.io/fluxcd/source-controller ghcr.io/appscode-images/fluxcd-source-controller || true
         image-syncer ghcr.io/scality/cloudserver ghcr.io/appscode/cloudserver || true
         image-syncer ghcr.io/stakater/reloader ghcr.io/appscode/reloader || true
         image-syncer gotenberg/gotenberg ghcr.io/appscode/gotenberg || true
