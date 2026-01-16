@@ -49,6 +49,7 @@ func main() {
 			klog.Infof("failed to copy %s:%s, err: %v", dst, tag, err)
 			continue
 		}
+		klog.Infof("copied %s:%s", dst, tag)
 	}
 }
 
@@ -58,6 +59,6 @@ func ImageDigest(image, tag string) (string, bool) {
 	if err == nil {
 		return digest, true
 	}
-	klog.Errorln(err)
+	// klog.Errorln(err)
 	return "", false
 }
