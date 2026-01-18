@@ -57,5 +57,6 @@ jobs:
         image-syncer quay.io/jetstack/cert-manager-controller ghcr.io/appscode-images/cert-manager-controller || true
         image-syncer quay.io/jetstack/cert-manager-webhook ghcr.io/appscode-images/cert-manager-webhook || true
         image-syncer registry.k8s.io/ingress-nginx/controller ghcr.io/appscode-images/ingress-nginx-controller
+        image-syncer restic/restic ghcr.io/appscode-images/restic || true
         image-syncer rpardini/docker-registry-proxy ghcr.io/appscode/docker-registry-proxy || true
         image-syncer xpkg.upbound.io/crossplane/crossplane ghcr.io/kubedb/crossplane || true
