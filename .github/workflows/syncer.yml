@@ -55,7 +55,7 @@ jobs:
         image-syncer quay.io/jetstack/cert-manager-acmesolver ghcr.io/appscode-images/cert-manager-acmesolver || true
         image-syncer quay.io/jetstack/cert-manager-cainjector ghcr.io/appscode-images/cert-manager-cainjector || true
         image-syncer quay.io/jetstack/cert-manager-controller ghcr.io/appscode-images/cert-manager-controller || true
-        image-syncer quay.io/jetstack/cert-manager-startupapicheck:v1.19.2 ghcr.io/appscode-images/cert-manager-startupapicheck:v1.19.2 || true
+        image-syncer quay.io/jetstack/cert-manager-startupapicheck ghcr.io/appscode-images/cert-manager-startupapicheck || true
         image-syncer quay.io/jetstack/cert-manager-webhook ghcr.io/appscode-images/cert-manager-webhook || true
         image-syncer registry.k8s.io/ingress-nginx/controller ghcr.io/appscode-images/ingress-nginx-controller
         image-syncer restic/restic ghcr.io/appscode-images/restic || true
